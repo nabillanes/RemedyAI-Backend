@@ -38,4 +38,8 @@ async def get_message(message_id: int):
 async def greet():
     return "Hello"
 
+@router.get("/greet2")
+async def greet2():
+    return "Hello2"
+
 # TODO: mulai tulis kode dari sini
