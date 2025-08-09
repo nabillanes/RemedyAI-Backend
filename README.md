@@ -14,7 +14,7 @@ Namun, apabila belum pernah menjalankan aplikasi ini sebelumnya, lakukan langkah
 ### 1. Install Dependencies
 
 ```bash
-curl -LsSf https://astral.sh/uv/install.sh | sh
+powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
 uv venv -p 3.13
 .venv/Scripts/activate
 uv pip install -e .
