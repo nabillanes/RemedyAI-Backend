@@ -8,7 +8,7 @@ router = APIRouter()
 
 @router.post("/messages/create", response_model=TextResponse)
 async def create_message(text_message: TextMessage):
-    result = text_service.create_text(text_message.text)
+    result = text_service.create_message(text_message.text)
     return TextResponse(
         message="Text added to database",
         original_text=result["original_text"],

@@ -46,23 +46,21 @@ API bisa diakses pada `http://localhost:8000`
 Untuk membuat pesan, coba *paste* perintah ini ke terminal
 
 ```bash
-curl -X POST http://localhost:8000/messages/create \
-     -H "Content-Type: application/json" \
-     -d '{"text": "Hello world"}'
+Invoke-WebRequest -Uri http://localhost:8000/messages/create -Method POST -ContentType "application/json" -Body '{"text": "Hello world"}'
 ```
 
 Periksa pesan yang tersimpan dengan perintah berikut
 
 ```bash
 # Pengaksesan semua pesan
-curl -X GET http://localhost:8000/messages
+Invoke-WebRequest -Method GET -Uri http://localhost:8000/messages
 
 # Pengaksesan pesan tertentu
-curl -X GET http://localhost:8000/messages/{id}
+Invoke-WebRequest -Method GET -Uri http://localhost:8000/messages/{id}
 ```
 
 Pesan yang sudah disimpan dapat dihapus dengan perintah berikut
 
 ```bash
-curl -X DELETE http://localhost:8000/messages/{id}
+Invoke-WebRequest -Method DELETE -Uri http://localhost:8000/messages/{id}
 ```
