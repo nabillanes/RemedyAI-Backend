@@ -34,4 +34,8 @@ async def get_message(message_id: int):
         raise HTTPException(status_code=404, detail="Message not found")
     return message
 
+@router.get("/greet")
+async def greet():
+    return "Hello"
+
 # TODO: mulai tulis kode dari sini
